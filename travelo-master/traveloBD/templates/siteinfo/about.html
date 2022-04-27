@@ -1,0 +1,83 @@
+
+{% extends "base.html"%}
+{%load static%}
+
+{%block content%}
+        <!-- header -->
+        <header class = "flex header-sm">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>About</h1>
+                    <p> GoTuda the Almaty's largest travel guidance platform, helps hundreds of people each month become better travelers, from planning to booking to taking a trip. </p>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- about section -->
+        <section id = "about" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">things to know about us</span>
+                    <h2 class = "lg-title">our story</h2>
+                </div>
+
+                <div class = "about-row">
+                    <div class = "about-left my-2">
+                        <img src = "{%static 'images/photo.jpg'%}" alt = "about img">
+                    </div>
+                    <div class = "about-right">
+                        <h2>3 Years of Experience</h2>
+                        <p class = "text">Travelers across the globe use the GoTuda site and app to discover where to stay, what to do and where to eat based on guidance from those who have been there before. With more than 1 billion reviews and opinions of nearly 8 million businesses, travelers turn to GoTuda to find deals on accommodations, book experiences, reserve tables at delicious restaurants and discover great places nearby. As a travel guidance company available in 43 markets and 22 languages, GoTuda makes planning easy no matter the trip type.</p>
+                        <p class = "text">Stay Tuned With US!!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+        <!-- facts section -->
+        <section id = "facts" class = "py-4 flex">
+            <div class = "container">
+                <div class = 'title-wrap'>
+                    <span class = "sm-title">know some facts about our agency</span>
+                    <h2 class = "lg-title">fun facts</h2>
+                </div>
+
+                <div class = "facts-row">
+                    <div class = "facts-item">
+                        <span class = "fas fa-camera-retro facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>1220</strong>
+                            <p class = "text">photos taken</p>
+                        </div>
+                    </div>
+
+                    <div class = "facts-item">
+                        <span class = "fas fa-umbrella-beach  facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>450</strong>
+                            <p class = "text">beaches visited</p>
+                        </div>
+                    </div>
+
+                    <div class = "facts-item">
+                        <span class = "fas fa-mountain facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>84</strong>
+                            <p class = "text">mountains climbed</p>
+                        </div>
+                    </div>
+
+                    <div class = "facts-item">
+                        <span class = "fas fa-ship facts-icon"></span>
+                        <div class = "facts-info">
+                            <strong>120</strong>
+                            <p class = "text">cruises organized</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of facts section -->
+{%endblock content%}

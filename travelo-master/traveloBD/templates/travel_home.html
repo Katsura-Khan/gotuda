@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{%load static%}
+
+
+
+        <!-- header -->
+{%block content%}
+        <header class = "flex">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>Search Places</h1>
+                    <p>Search for the places that you want to go or you want to know about.</p>
+                </div>
+                <div class = "header-form">
+                    <h2>Choose your Travel location:</h2>
+                    <form class = "flex">
+                        <input type = "text" class = "form-control" placeholder="Destination name">
+
+                        <input type="submit" class = "btn" value = "Search">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- featured section -->
+        <section id = "featured" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">know about some places before your travel</span>
+                    <h2 class = "lg-title">featured places</h2>
+                </div>
+
+                <div class = "featured-row">
+                    {%for dest in dests%}
+                    <a href="/places/{{dest.id}}/">
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "{{dest.img.url}}" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                               {{dest.name}},
+                            </span>
+                            <div>
+                                <p class = "text">{{dest.des}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    {%endfor%}
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- end of featured section -->
+
+        <!-- services section -->
+        <section id = "services" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">know about services that we offer</span>
+                    <h2 class = "lg-title">Our services</h2>
+                </div>
+
+                <div class = "services-row">
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-hotel"></i>
+                        </span>
+                        <h3>Luxurious Hotel</h3>
+                        <p class = "text">makes it easy to book the best luxury hotels in the world. We have plenty of exquisite, luxurious accommodation choices for you to compare and book! Once you've decided on the best destination for your travels, you'll be able to see what our most popular luxury hotels are in that particular area.</p>
+                        <a href = "#" class = "btn">CLICK</a>
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <h3>Trave Guide</h3>
+                        <p class = "text">one-stop source for the best travel guides, vacation brochures, maps and planning kits. Whether you want them in your mailbox or your email inbox, these travel guides and travel brochures help you plan the perfect vacation.</p>
+                        <a href = "#" class = "btn">CLICK</a>
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-money-bill"></i>
+                        </span>
+                        <h3>Suitable Price</h3>
+                        <p class = "text">Find the best price for your trip. See the comparison of different roots and ways so you can choose the suitable price. Compare hotels and visit the best places of your trip . Know the pro's and con's about the trip .  </p>
+                        <a href = "#" class = "btn">CLICK</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+        <!-- testimonials section -->
+        <section id = "testimonials" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">what our clients say about us</span>
+                    <h2 class = "lg-title">testimonials</h2>
+                </div>
+
+                <div class = "test-row">
+                    <div class = "test-item">
+                        <p class = "text">awesome this trip was craze after SDU i going in MARSRUTKA i never see to many people in one bus after 30 minutes of driving in such a transport, I reached sairan and felt nirvana</p>
+                        <div class = "test-item-info">
+                            <img src = "{% static 'images/jamee.jpg'%}" alt = "testimonial">
+                            <div>
+                                <h3>Zhurtyn Balasy</h3>
+                                <p class = "text">Trip to Sairan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "test-item">
+                        <p class = "text">Students in SDU so loved me.They said my youtube video is so helpful to close the topic especially DataBase
+They are very responsable.</p>
+                        <div class = "test-item-info">
+                            <img src = "{% static 'images/sajib.jpg'%}" alt = "testimonial">
+                            <div>
+                                <h3>Indus is Youtuba</h3>
+                                <p class = "text">Trip to SDU</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "test-item">
+                        <p class = "text">Almaty the best city for me I like Almaty I respect Tokaev </p>
+                        <div class = "test-item-info">
+                            <img src = "{% static 'images/raihan.jpg'%}" alt = "testimonial">
+                            <div>
+                                <h3>Indus from Medical University</h3>
+                                <p class = "text">trip to Almaty</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of testimonials section -->
+
+        <!-- video section -->
+<!--        <section id = "video">-->
+<!--            <div class = "video-wrapper flex">-->
+<!--                <video loop>-->
+
+<!--                    <source src = "{%static 'videos/bangladesh.mp4'%}" type = "video/mp4">-->
+<!--                </video>-->
+<!--                <button type = "button" id = "play-btn">-->
+<!--                    <i class = "fas fa-play"></i>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </section>-->
+        <!-- end of video section -->
+
+
+
+        <script src = "{% static 'js/script.js'%}"></script>
+        <script>
+            // play/pause video
+            let video = document.querySelector('.video-wrapper video');
+            document.getElementById('play-btn').addEventListener('click', () => {
+                if(video.paused){
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        </script>
+{%endblock content%}
+
+
+
+
